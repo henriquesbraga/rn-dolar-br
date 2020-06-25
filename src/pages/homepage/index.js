@@ -7,7 +7,7 @@ import Mybutton from '../../components/button';
 
 const HomeScreen = () =>{
     
-let [dollarData, setDollarData] = useState(); //constante, função
+let [dollarData, setDollarData] = useState(); //variavel, função
 let [valueInput, setValueInput] = useState();
 let [convertedPrice = 0.00, setConvertedPrice] = useState();
 
