@@ -23,6 +23,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
         paddingBottom: 10,
         borderRadius: 5,
+        elevation: 5
         
     },
     containerTop:{

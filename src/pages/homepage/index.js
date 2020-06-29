@@ -17,7 +17,7 @@ let [convertedPrice = 0.00, setConvertedPrice] = useState();
 
             axios.get('https://economia.awesomeapi.com.br/all/USD-BRL')
             .then(({data}) =>{
-                setDollarData(data.USD.high);
+                setDollarData(data.USD.ask);
             }, [])
             .catch(() =>{
                 Alert.alert(
