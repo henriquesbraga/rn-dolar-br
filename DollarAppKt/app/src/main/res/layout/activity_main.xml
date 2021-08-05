@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.MainActivity"
+    android:paddingHorizontal="60dp">
+
+
+
+    <RelativeLayout
+        android:id="@+id/dlrcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dollarviewborder"
+        android:backgroundTint="#009933">
+
+
+        <TextView
+            android:id="@+id/txttop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewborder"
+            android:backgroundTint="#00cc44"
+            android:gravity="center"
+            android:text="1 Dolar americano:"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/rsview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txttop"
+            android:layout_marginLeft="25dp"
+            android:gravity="center"
+            android:text="R$"
+            android:textColor="@color/black"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/dlrvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txttop"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/rsview"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="70sp" />
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/dlrcontainer"
+        android:layout_marginTop="56dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
