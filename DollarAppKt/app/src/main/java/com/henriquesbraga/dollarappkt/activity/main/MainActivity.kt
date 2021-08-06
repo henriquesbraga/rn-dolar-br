@@ -2,13 +2,13 @@ package com.henriquesbraga.dollarappkt.activity.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.henriquesbraga.dollarappkt.databinding.ActivityMainBinding
 import com.henriquesbraga.dollarappkt.model.ApiResponse
-import com.henriquesbraga.dollarappkt.model.USD
-import kotlin.math.roundToInt
 
 
 class MainActivity : AppCompatActivity(), MainView {
@@ -23,8 +23,14 @@ class MainActivity : AppCompatActivity(), MainView {
         setContentView(view)
 
         presenter = MainPresenter(this)
-        presenter.getData()
 
+        val mainHandler = Handler(Looper.getMainLooper())
+        mainHandler.post(object: Runnable {
+            override fun run() {
+                presenter.getData()
+                mainHandler.postDelayed(this, 5000)
+            }
+        })
     }
 
     override fun showLoading() {
